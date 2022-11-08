@@ -13,9 +13,11 @@ boxes.style.flexDirection = "column";
 boxes.style.gap = "5px";
 
 function createBoxes(amount) {
-    destroyBoxes();
     const elements = [];
     let size = 30;
+    if (boxes.lastElementChild) {
+        size = boxes.lastElementChild.offsetWidth + 10;
+    }
     for (let i = 0; i < amount; i += 1) {
         const element = document.createElement("div");
         element.style.width = `${size}px`;
