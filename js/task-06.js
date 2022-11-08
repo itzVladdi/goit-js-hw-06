@@ -3,7 +3,9 @@ const input = document.querySelector("#validation-input");
 function inputValidation(event) {
     const { currentTarget } = event;
     const message = currentTarget.value;
-    if (message.length <= currentTarget.dataset.length) {
+    if (message.length === Number(currentTarget.dataset.length)) {
+        console.log(message.length);
+        console.log(currentTarget.dataset.length);
         currentTarget.classList.add("valid");
         currentTarget.classList.remove("invalid");
     } else {

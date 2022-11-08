@@ -33,8 +33,7 @@ function destroyBoxes() {
 }
 
 createBtn.addEventListener("click", () => {
-    const quantity = input.value;
-    createBoxes(quantity);
+    createBoxes(input.value);
 });
 
 destroyBtn.addEventListener("click", destroyBoxes);
